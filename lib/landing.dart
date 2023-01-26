@@ -36,7 +36,10 @@ class _LandingPageState extends State<LandingPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
-            Image(image: AssetImage('assets/landing-logo2.jpg')),
+            Image(
+              image: AssetImage('assets/landing-logo2.jpg'),
+              height: 300,
+            ),
             SizedBox(height: 30),
             Text('SELAMAT DATANG',
                 style: TextStyle(
@@ -45,15 +48,15 @@ class _LandingPageState extends State<LandingPage> {
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
                 )),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(30),
               child: Text(
                 'Gak perlu pusing-pusing lagi, buat pikirin pakaian yang belum dicuci. NYUCI-IN akan membuat pakaian anda siap pakai.',
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.normal,
                 ),
               ),
@@ -61,14 +64,14 @@ class _LandingPageState extends State<LandingPage> {
             SizedBox(height: 30),
             SizedBox(
                 height: 70,
-                width: 200,
+                width: 180,
                 child: ElevatedButton(
                   child: Text(
                     "Lanjutkan",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 23,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromRGBO(42, 1, 128, 1),
+                      color: Color.fromRGBO(127, 16, 255, 1),
                     ),
                   ),
                   onPressed: () {
@@ -79,12 +82,12 @@ class _LandingPageState extends State<LandingPage> {
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
-                    onPrimary: Colors.grey,
-                    elevation: 20,
-                    shadowColor: Colors.grey,
+                    onPrimary: Colors.black,
+                    elevation: 15,
+                    shadowColor: Colors.black,
                     shape: RoundedRectangleBorder(
                         //to set border radius to button
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(20)),
                   ),
                 )),
           ],
@@ -93,71 +96,3 @@ class _LandingPageState extends State<LandingPage> {
     ));
   }
 }
-
-/*import 'package:flutter/material.dart';
-import 'package:nyuciin/components/responsive.dart';
-import 'package:nyuciin/components/login_signup_btn.dart';
-import 'package:nyuciin/components/welcome_image.dart';
-
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Background(
-      child: SingleChildScrollView(
-        child: SafeArea(
-          child: Responsive(
-            desktop: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                const Expanded(
-                  child: WelcomeImage(),
-                ),
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      SizedBox(
-                        width: 450,
-                        child: LoginAndSignupBtn(),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            mobile: const MobileWelcomeScreen(),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class MobileWelcomeScreen extends StatelessWidget {
-  const MobileWelcomeScreen({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        const WelcomeImage(),
-        Row(
-          children: const [
-            Spacer(),
-            Expanded(
-              flex: 8,
-              child: LoginAndSignupBtn(),
-            ),
-            Spacer(),
-          ],
-        ),
-      ],
-    );
-  }
-}
-*/
