@@ -57,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             icon: Icon(
                               Icons.people_alt,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -87,7 +87,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             icon: Icon(
                               Icons.person,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -118,7 +118,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             icon: Icon(
                               Icons.mail_lock_rounded,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -152,7 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             icon: Icon(
                               Icons.lock,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -187,7 +187,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             icon: Icon(
                               Icons.security,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -233,7 +233,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: ((context) => HomePage())),
+                                          builder: ((context) => LoginPage())),
                                     );
                                   }
                                 },

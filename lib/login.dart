@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                             icon: Icon(
                               Icons.person,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 1.0),
+                      padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 1.0),
                       child: SizedBox(
                         height: 90,
                         width: 350,
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                             icon: Icon(
                               Icons.mail_lock_rounded,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 1.0),
+                      padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 1.0),
                       child: SizedBox(
                         height: 90,
                         width: 350,
@@ -122,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                             icon: Icon(
                               Icons.lock,
                               color: Color.fromRGBO(157, 104, 210, 1),
-                              size: 45,
+                              size: 40,
                             ),
                           ),
                           style: TextStyle(fontSize: 20),
