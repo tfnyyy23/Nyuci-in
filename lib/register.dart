@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nyuciin/akun_cek.dart';
 import './home.dart';
 import './login.dart';
@@ -24,11 +25,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.fromLTRB(10.0, 50.0, 150.0, 8.0),
-                      child: Text('BUAT AKUN',
+                      child: Text('Buat Akun',
                           style: TextStyle(
                             color: Color.fromRGBO(157, 104, 210, 1),
                             fontSize: 35,
-                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Anton',
                           )),
                     ),
                     Row(

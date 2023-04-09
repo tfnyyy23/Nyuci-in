@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import './login.dart';
 
 class LandingPage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _LandingPageState extends State<LandingPage> {
                   decoration: TextDecoration.underline,
                   color: Colors.white,
                   fontSize: 40,
-                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Anton',
                 )),
             SizedBox(height: 20),
             Padding(

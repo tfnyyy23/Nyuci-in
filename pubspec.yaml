@@ -72,6 +72,20 @@ flutter:
       - assets/dashboard.png
       - assets/background-dashboard.png
       - assets/profile.png
+      - assets/laundry.png
+      - assets/setrika.png
+      - assets/setrika2.png
+      - assets/baju.png
+      - assets/kaos.png
+      - assets/cek_pesanan.png
+      - assets/shopping-bag.png
+      - assets/terbaru.png
+      - assets/terbaru2.png
+      - assets/mandiri.png
+      - assets/bni.png
+      - assets/bri.png
+      - assets/profile2.png
+      - assets/profile3.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
