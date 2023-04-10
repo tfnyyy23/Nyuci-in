@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nyuciin/home.dart';
 import 'package:nyuciin/pesanan.dart';
+import 'package:nyuciin/checkout.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BriPage extends StatefulWidget {
@@ -247,7 +248,8 @@ class _BriPageState extends State<BriPage> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: ((context) => HomePage())),
+                                          builder: ((context) =>
+                                              CheckoutPage())),
                                     );
                                   }
                                 },

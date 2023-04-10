@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nyuciin/akun_cek.dart';
 import './home.dart';
 import './register.dart';
+import 'package:http/http.dart' as http;
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,6 +16,41 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
+  // final TextEditingController _nameController = TextEditingController();
+  // final TextEditingController _emailController = TextEditingController();
+  // final TextEditingController _passwordController = TextEditingController();
+
+  // String _errorMessage = '';
+
+  // Future<void> _login() async {
+  //   final String email = _emailController.text.trim();
+  //   final String password = _passwordController.text.trim();
+  //   final String apiUrl = 'http://127.0.0.1:8000/api/login';
+
+  //   try {
+  //     final response = await http.post(
+  //       Uri.parse(apiUrl),
+  //       body: {
+  //         'email': email,
+  //         'password': password,
+  //       },
+  //     );
+  //     if (response.statusCode == 200) {
+  //       // Login success, navigate to home page
+  //       Navigator.pushReplacementNamed(context, './home');
+  //     } else {
+  //       // Login failed, show error message
+  //       final Map<String, dynamic> errorData = json.decode(response.body);
+  //       setState(() {
+  //         _errorMessage = errorData['message'];
+  //       });
+  //     }
+  //   } catch (error) {
+  //     setState(() {
+  //       _errorMessage = 'An error occurred while logging in';
+  //     });
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -164,14 +202,17 @@ class _LoginPageState extends State<LoginPage> {
                                   primary: Colors.transparent,
                                   onSurface: Colors.transparent,
                                 ),
+                                // onPressed: () {
+                                //   if (_formKey.currentState!.validate()) {
+                                //     _login();
+                                //   }
+                                // },
                                 onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: ((context) => HomePage())),
-                                    );
-                                  }
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: ((context) => HomePage())),
+                                  );
                                 },
                                 child: Padding(
                                   padding: EdgeInsets.only(
