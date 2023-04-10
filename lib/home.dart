@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nyuciin/login.dart';
 import 'package:nyuciin/pesanan.dart';
 import 'package:google_fonts/google_fonts.dart';
-import './home.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       builder: (BuildContext context) {
         return Container(
           width: 500,
-          height: 1000,
+          height: 500,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,8 +93,8 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                       padding: EdgeInsets.fromLTRB(0.0, 170.0, 0.0, 0.0),
                       child: Container(
-                          height: 200,
-                          width: 500,
+                          height: 300,
+                          width: 600,
                           decoration: const BoxDecoration(
                               borderRadius: BorderRadius.vertical(
                                 top: Radius.circular(35),
@@ -108,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                               Center(
                                   child: Padding(
                                 padding:
-                                    EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+                                    EdgeInsets.fromLTRB(0.0, 30.0, 0.0, 0.0),
                                 child: SizedBox(
                                     height: 60,
                                     width: 140,
@@ -132,17 +131,13 @@ class _HomePageState extends State<HomePage> {
                                               primary: Colors.transparent,
                                               onSurface: Colors.transparent,
                                             ),
-                                            onPressed: () {
-                                              if (_formKey.currentState!
-                                                  .validate()) {
-                                                Navigator.push(
+                                            onPressed: (() {
+                                              Navigator.push(
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: ((context) =>
-                                                          LoginPage())),
-                                                );
-                                              }
-                                            },
+                                                          LoginPage())));
+                                            }),
                                             child: Padding(
                                               padding: EdgeInsets.only(
                                                 top: 18,
@@ -197,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Row(children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.fromLTRB(15.0, 30.0, 0.0, 1.0),
+                    padding: EdgeInsets.fromLTRB(15.0, 20.0, 0.0, 1.0),
                     child: ElevatedButton(
                       onPressed: () {
                         _showProfile(context);
@@ -218,7 +213,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(17.0, 30.0, 0.0, 1.0),
+                    padding: EdgeInsets.fromLTRB(17.0, 20.0, 0.0, 1.0),
                     child: Text(
                       "Brotoseno",
                       style: const TextStyle(
@@ -230,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ]),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0.0, 113.0, 0.0, 90.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
                   child: Container(
                     height: 900,
                     width: 900,
@@ -526,7 +521,7 @@ class _HomePageState extends State<HomePage> {
                           padding: EdgeInsets.fromLTRB(0.0, 35.0, 0.0, 0.0),
                           child: SizedBox(
                               height: 70,
-                              width: 380,
+                              width: 340,
                               child: DecoratedBox(
                                   decoration: BoxDecoration(
                                       gradient: LinearGradient(
@@ -569,7 +564,7 @@ class _HomePageState extends State<HomePage> {
                                         children: <Widget>[
                                           Padding(
                                             padding: EdgeInsets.only(
-                                              left: 50,
+                                              left: 40,
                                               top: 10,
                                               bottom: 10,
                                             ),
@@ -582,7 +577,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           Padding(
                                             padding: EdgeInsets.only(
-                                              left: 20,
+                                              left: 10,
                                               top: 18,
                                               bottom: 18,
                                             ),

@@ -220,8 +220,8 @@ class _MandiriPageState extends State<MandiriPage> {
                             ),
                           ))),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(130.0, 80.0, 0.0, 100.0),
-                    child: SizedBox(
+                      padding: EdgeInsets.fromLTRB(130.0, 80.0, 0.0, 100.0),
+                      child: SizedBox(
                         height: 60,
                         width: 140,
                         child: DecoratedBox(
@@ -251,7 +251,8 @@ class _MandiriPageState extends State<MandiriPage> {
                                     );
                                   }
                                 },
-                                child: Padding(
+                                child: Center(
+                                    child: Padding(
                                   padding: EdgeInsets.only(
                                     top: 18,
                                     bottom: 18,
@@ -265,7 +266,7 @@ class _MandiriPageState extends State<MandiriPage> {
                                     ),
                                   ),
                                 )))),
-                  )
+                      ))
                 ],
               ),
             )));

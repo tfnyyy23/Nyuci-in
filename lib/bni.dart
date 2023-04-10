@@ -1,107 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:nyuciin/home.dart';
-import 'package:nyuciin/mandiri.dart';
-import 'package:nyuciin/bni.dart';
-import 'package:nyuciin/bri.dart';
-import 'package:nyuciin/checkout.dart';
+import 'package:nyuciin/pesanan.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PesananPage extends StatefulWidget {
-  const PesananPage({super.key});
+class BniPage extends StatefulWidget {
+  const BniPage({super.key});
 
   @override
-  _PesananPageState createState() => new _PesananPageState();
+  _BniPageState createState() => new _BniPageState();
 }
 
-class _PesananPageState extends State<PesananPage> {
+class _BniPageState extends State<BniPage> {
   final _formKey = GlobalKey<FormState>();
-
-  void _showModal(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return Column(
-          children: <Widget>[
-            Padding(
-                padding: EdgeInsets.fromLTRB(30.0, 60.0, 0.0, 0.0),
-                child: SizedBox(
-                    height: 70,
-                    width: 200,
-                    child: ElevatedButton(
-                      child: Image(
-                        image: AssetImage('assets/mandiri.png'),
-                      ),
-                      onPressed: (() {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) => MandiriPage())));
-                      }),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.black,
-                        elevation: 15,
-                        shadowColor: Colors.black,
-                        shape: RoundedRectangleBorder(
-                            //to set border radius to button
-                            borderRadius: BorderRadius.circular(20)),
-                      ),
-                    ))),
-            Padding(
-                padding: EdgeInsets.fromLTRB(30.0, 30.0, 0.0, 0.0),
-                child: SizedBox(
-                    height: 70,
-                    width: 200,
-                    child: ElevatedButton(
-                      child: Image(
-                        image: AssetImage('assets/bni.png'),
-                      ),
-                      onPressed: (() {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) => BniPage())));
-                      }),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.black,
-                        elevation: 15,
-                        shadowColor: Colors.black,
-                        shape: RoundedRectangleBorder(
-                            //to set border radius to button
-                            borderRadius: BorderRadius.circular(20)),
-                      ),
-                    ))),
-            Padding(
-                padding: EdgeInsets.fromLTRB(30.0, 30.0, 0.0, 0.0),
-                child: SizedBox(
-                    height: 70,
-                    width: 200,
-                    child: ElevatedButton(
-                      child: Image(
-                        image: AssetImage('assets/bri.png'),
-                      ),
-                      onPressed: (() {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) => BriPage())));
-                      }),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Colors.black,
-                        elevation: 15,
-                        shadowColor: Colors.black,
-                        shape: RoundedRectangleBorder(
-                            //to set border radius to button
-                            borderRadius: BorderRadius.circular(20)),
-                      ),
-                    ))),
-          ],
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -113,31 +23,36 @@ class _PesananPageState extends State<PesananPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                      padding: EdgeInsets.fromLTRB(15.0, 50.0, 0.0, 0.0),
-                      child: Row(
-                        children: <Widget>[
-                          IconButton(
-                            icon: new Icon(
-                              Icons.arrow_back_rounded,
-                              color: Colors.black,
-                              size: 40,
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: ((context) => HomePage())));
-                            },
-                          ),
-                          Padding(
-                              padding: EdgeInsets.fromLTRB(25.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                "Buat Pesanan",
-                                style: TextStyle(
-                                    fontFamily: 'Anton', fontSize: 35),
-                              )),
-                        ],
+                    padding: EdgeInsets.fromLTRB(250.0, 80.0, 0.0, 0.0),
+                    child: ElevatedButton(
+                      child: Text(
+                        "BATALKAN",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontFamily: 'Anton',
+                          color: Colors.red,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        onSurface: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => PesananPage())),
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.fromLTRB(25.0, 80.0, 0.0, 0.0),
+                      child: Text(
+                        "Buat Pesanan",
+                        style: TextStyle(fontFamily: 'Anton', fontSize: 35),
                       )),
+
                   Padding(
                       padding: EdgeInsets.fromLTRB(40.0, 20.0, 0.0, 0.0),
                       child: Text(
@@ -223,7 +138,7 @@ class _PesananPageState extends State<PesananPage> {
                     children: <Widget>[
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(50.0, 10.0, 25.0, 0.0),
+                          padding: EdgeInsets.fromLTRB(50.0, 10.0, 30.0, 0.0),
                           child: TextField(
                             keyboardType: TextInputType.phone,
                             decoration: InputDecoration(
@@ -239,7 +154,7 @@ class _PesananPageState extends State<PesananPage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0.0, 5.0, 30.0, 0.0),
+                        padding: EdgeInsets.fromLTRB(0.0, 10.0, 30.0, 0.0),
                         child: Text(
                           "Kg / Rp",
                           style: const TextStyle(
@@ -252,12 +167,16 @@ class _PesananPageState extends State<PesananPage> {
                       Flexible(
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(0.0, 10.0, 20.0, 0.0),
-                          child: Text(
-                            "",
-                            style: const TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                          child: TextField(
+                            keyboardType: TextInputType.phone,
+                            decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  width: 1,
+                                  color: Color.fromRGBO(143, 0, 255, 50),
+                                ), //<-- SEE HERE
+                                borderRadius: BorderRadius.circular(50.0),
+                              ),
                             ),
                           ),
                         ),
@@ -276,40 +195,20 @@ class _PesananPageState extends State<PesananPage> {
                       )),
 
                   Padding(
-                      padding: EdgeInsets.fromLTRB(50.0, 30.0, 0.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(50.0, 20.0, 0.0, 0.0),
                       child: SizedBox(
-                          height: 50,
-                          width: 230,
+                          height: 70,
+                          width: 200,
                           child: ElevatedButton(
-                            child: Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding:
-                                      EdgeInsets.fromLTRB(22.0, 5.0, 0.0, 0.0),
-                                  child: Text(
-                                    "Pilih Transaksi",
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        fontFamily: 'Inter'),
-                                  ),
-                                ),
-                                IconButton(
-                                  icon: new Icon(
-                                    Icons.keyboard_arrow_right_outlined,
-                                    color: Colors.black,
-                                    size: 40,
-                                  ),
-                                  onPressed: () {
-                                    _showModal(context);
-                                  },
-                                ),
-                              ],
+                            child: Image(
+                              image: AssetImage('assets/bni.png'),
                             ),
-                            onPressed: () {
-                              _showModal(context);
-                            },
+                            onPressed: (() {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => PesananPage())));
+                            }),
                             style: ElevatedButton.styleFrom(
                               primary: Colors.white,
                               onPrimary: Colors.black,
@@ -317,7 +216,7 @@ class _PesananPageState extends State<PesananPage> {
                               shadowColor: Colors.black,
                               shape: RoundedRectangleBorder(
                                   //to set border radius to button
-                                  borderRadius: BorderRadius.circular(50)),
+                                  borderRadius: BorderRadius.circular(20)),
                             ),
                           ))),
                   Padding(
@@ -344,16 +243,20 @@ class _PesananPageState extends State<PesananPage> {
                                   onSurface: Colors.transparent,
                                 ),
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: ((context) => CheckoutPage())),
-                                  );
+                                  if (_formKey.currentState!.validate()) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: ((context) => HomePage())),
+                                    );
+                                  }
                                 },
                                 child: Center(
                                     child: Padding(
                                   padding: EdgeInsets.only(
-                                      top: 18, bottom: 18, left: 0, right: 0),
+                                    top: 18,
+                                    bottom: 18,
+                                  ),
                                   child: Text(
                                     "Buat",
                                     style: TextStyle(
